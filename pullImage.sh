@@ -16,6 +16,6 @@ then
   echo -e ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> tags successfully!\n"
 else
   echo -e ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> pull fail try commit and download!\n"
-  ./commit.sh ${image}
-  ./download.sh ${image}
+  sh commit.sh ${image}
+  sh download.sh ${image}
 fi
