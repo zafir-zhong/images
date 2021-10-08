@@ -11,7 +11,7 @@ thisTag=`git tag --list | grep 'release-v${gen_image}'`
 if [ -n "${thisTag}" ];
 then
   echo -e "\n*************************************************"
-  echo ">>> this tag had in repositories <<< "
+  echo ">>> already tag , go on <<< "
   echo -e "*************************************************\n"
   exit 0
 fi
