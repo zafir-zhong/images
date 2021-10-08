@@ -38,6 +38,16 @@ else
              echo -e ">>> download successfully! <<<"
              echo -e "*************************************************\n"
              break;
+           else 
+             echo -e "*************************************************"
+             echo -e ">>> download fail, will try it again! <<<"
+             echo -e "*************************************************\n"
            fi
          done
+  if [ "${imageMsg}" != "" ]; 
+  then
+    echo -e "*************************************************"
+    echo -e ">>> download fail, please wait a minute ! <<<"
+    echo -e "*************************************************\n"
+  fi
 fi
