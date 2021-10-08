@@ -8,7 +8,7 @@ cd ${baseDirForScriptSelf}
 git checkout .
 git pull
 thisTag=`git tag --list | grep 'release-v${gen_image}'`
-if [ -n ${thisTag} ];
+if [ -n "${thisTag}" ];
 then
   echo -e "\n*************************************************"
   echo ">>> this tag had in repositories <<< "
