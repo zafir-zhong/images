@@ -1,1 +1,1 @@
-From gcr.io/etcd-development/etcd:v3.4.9
+From gcr.io/kubernetes-helm/tiller:v2.13.1
