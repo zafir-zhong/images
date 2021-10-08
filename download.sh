@@ -11,5 +11,5 @@ docker pull registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image}
 docker tag registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image} ${image}
 docker rmi registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image}
 echo -e "*************************************************"
-echo -e ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> download shell finish!"
+echo -e ">>> download shell finish! <<<"
 echo -e "*************************************************\n"
