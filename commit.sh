@@ -4,8 +4,17 @@ image=${1}
 tmp_image=${image#*\/}
 gen_image=${tmp_image//[\/:]/-}
 baseDirForScriptSelf=$(cd "$(dirname "$0")"; pwd)
+cd ${baseDirForScriptSelf}
 git checkout .
-git pull 
+git pull
+thisTag=`git tag --list | grep release-v${gen_image}`
+if [ -n ${thisTag} ];
+then
+  echo -e "\n*************************************************"
+  echo ">>> this tag had in repositories <<< "
+  echo -e ">>> start to commit change for image: "${image}" <<<"
+  echo -e "*************************************************\n"
+fi
 echo "From ${image}" > Dockerfile
 echo -e "\n*************************************************"
 echo ">>> Dockerfile has changed to :【"`cat Dockerfile`"】<<< "
