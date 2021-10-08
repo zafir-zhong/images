@@ -4,7 +4,8 @@ image=${1}
 tmp_image=${image#*\/}
 gen_image=${tmp_image//[\/:]/-}
 baseDirForScriptSelf=$(cd "$(dirname "$0")"; pwd)
-echo "now in: "${baseDirForScriptSelf}
+echo "shell in: "${baseDirForScriptSelf}
+cd ${baseDirForScriptSelf}
 echo -e "\n*************************************************"
 echo -e ">>> will pull this image from: registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image} <<<"
 echo -e "*************************************************\n"
