@@ -4,6 +4,7 @@ image=${1}
 tmp_image=${image#*\/}
 gen_image=${tmp_image//[\/:]/-}
 
+echo "now in: "`pwd`
 echo -e "\n*************************************************"
 echo -e ">>> will pull this image from: registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image} <<<"
 echo -e "*************************************************\n"
