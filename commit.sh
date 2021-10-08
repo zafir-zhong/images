@@ -5,8 +5,8 @@ tmp_image=${image#*\/}
 gen_image=${tmp_image//[\/:]/-}
 baseDirForScriptSelf=$(cd "$(dirname "$0")"; pwd)
 cd ${baseDirForScriptSelf}
-git checkout .
-git pull
+#git checkout .
+#git pull
 thisTag=`git tag --list | grep 'release-v${gen_image}'`
 if [ "${thisTag}" != "" ];
 then
