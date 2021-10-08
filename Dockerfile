@@ -1,1 +1,1 @@
-From calico/pod2daemon-flexvol:v3.13.2
+From k8s.gcr.io/metrics-server-amd64:v0.3.6
