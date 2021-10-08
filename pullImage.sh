@@ -3,8 +3,8 @@
 image=${1}
 tmp_image=${image#*\/}
 gen_image=${tmp_image//[\/:]/-}
-
-echo "now in: "`pwd`
+baseDirForScriptSelf=$(cd "$(dirname "$0")"; pwd)
+echo "now in: "${baseDirForScriptSelf}
 echo -e "\n*************************************************"
 echo -e ">>> will pull this image from: registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image} <<<"
 echo -e "*************************************************\n"
@@ -24,14 +24,14 @@ else
   echo -e "\n*************************************************"
   echo -e ">>> pull fail try commit and download! <<<"
   echo -e "*************************************************\n"
-  ./commit.sh ${image}
+  ${baseDirForScriptSelf}/commit.sh ${image}
   for((i=1;i<=10;i++));
          do   
            echo -e "\n*************************************************"
            echo -e ">>> wait 10s to download! <<<"
            echo -e "*************************************************\n"
            sleep 10s
-           ./download.sh ${image} 2>&1
+           ${baseDirForScriptSelf}/download.sh ${image} 2>&1
            imageMsg=`docker images | grep ${gen_image}`
            if [ "${imageMsg}" != "" ]; 
            then
