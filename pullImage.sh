@@ -30,7 +30,7 @@ else
            echo -e ">>> wait 10s to download! <<<"
            echo -e "*************************************************\n"
            sleep 10s
-           ./download.sh ${image} 2&>1
+           ./download.sh ${image} 2>&1
            imageMsg=`docker images | grep ${gen_image}`
            if [ "${imageMsg}" != "" ]; 
            then
