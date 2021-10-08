@@ -3,7 +3,7 @@
 image=${1}
 tmp_image=${image#*\/}
 gen_image=${tmp_image//[\/:]/-}
-
+baseDirForScriptSelf=$(cd "$(dirname "$0")"; pwd)
 git checkout .
 git pull 
 echo "From ${image}" > Dockerfile
@@ -15,7 +15,7 @@ git add .
 git commit -m "add images '${image}'"
 git tag release-v${gen_image}
 git push --tags
-echo "\n*************************************************"
+echo -e "\n*************************************************"
 echo -e ">>> commit successfully! <<"
 echo -e "You can download image by following command:\n"
 echo -e ${baseDirForScriptSelf}"/download.sh ${image}\n"
