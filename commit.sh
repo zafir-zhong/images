@@ -18,6 +18,6 @@ git push --tags
 echo "\n*************************************************"
 echo -e ">>> commit successfully! <<"
 echo -e "You can download image by following command:\n"
-echo -e "download.sh ${image}\n"
+echo -e ".\download.sh ${image}\n"
 echo "If download failed after a long time, please submit a issue at: https://github.com/zafir-zhong/images/issues"
 echo -e "*************************************************\n"
