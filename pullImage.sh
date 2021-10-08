@@ -17,5 +17,7 @@ then
 else
   echo -e ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> pull fail try commit and download!\n"
   ./commit.sh ${image}
+  echo -e ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> finish commit，wait 10s to download!\n"
+  sleep 10s
   ./download.sh ${image}
 fi
