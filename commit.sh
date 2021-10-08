@@ -13,7 +13,7 @@ then
   echo -e "\n*************************************************"
   echo ">>> this tag had in repositories <<< "
   echo -e "*************************************************\n"
-  return 0
+  exit 0
 fi
 echo "From ${image}" > Dockerfile
 echo -e "\n*************************************************"
