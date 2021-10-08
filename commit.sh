@@ -8,6 +8,7 @@ cd ${baseDirForScriptSelf}
 #git checkout .
 #git pull
 thisTag=`git tag --list | grep 'release-v${gen_image}'`
+echo ${thisTag}
 if [ "${thisTag}" != "" ];
 then
   echo -e "\n*************************************************"
