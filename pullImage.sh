@@ -7,8 +7,8 @@ gen_image=${tmp_image//[\/:]/-}
 
 echo "will pull this image from: registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image}"
 docker pull registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image}
-image=`docker images | grep ${gen_image}`
-if [ -n "${image}" ];
+imageMsg=`docker images | grep ${gen_image}`
+if [ -n "${imageMsg}" ];
 then
   echo -e ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> download successfully!\n"
   docker tag registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image} ${image}
