@@ -35,6 +35,7 @@ else
            imageMsg=`docker images | grep ${gen_image}`
            if [ "${imageMsg}" != "" ]; 
            then
+             docker rmi registry.cn-hangzhou.aliyuncs.com/zafir-zhong/images:${gen_image}
              echo -e "\n*************************************************"
              echo -e ">>> download successfully! <<<"
              echo -e "*************************************************\n"
