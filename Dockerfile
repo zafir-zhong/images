@@ -1,1 +1,1 @@
-From calico/pod2daemon-flexvol:v3.13.2
+From registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
